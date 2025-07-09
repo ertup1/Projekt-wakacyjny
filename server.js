@@ -10,7 +10,8 @@ const io = new Server(server);
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.send('Serwer szachowy działa!');
+  //res.send('Serwer szachowy działa!');
+  res.sendFile(path.join(__dirname, 'animacja.html'));
 });
 
 io.on('connection', (socket) => {
