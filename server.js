@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(__dirname));
 app.get('/', (req, res) => {
   //res.send('Serwer szachowy działa!');
-  res.sendFile(path.join(__dirname, 'stronaglowna.php'));
+  res.sendFile(path.join(__dirname, 'stronaglowna.html'));
 });
 
 io.on('connection', (socket) => {
